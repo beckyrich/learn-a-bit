@@ -17,19 +17,17 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 64px;
   line-height: 1.5;
   color: white;
   text-shadow: 2px 2px 4px #000000;
-  padding: 20px 40px;
 }
 
 p {
-  display: grid;
-  grid-template-columns: 500px;
-  padding: 10px 40px;
+  font-size: 18px;
 }
 
+/* Navbar */
 .nav__links {
   list-style-type: none;
 }
@@ -37,7 +35,7 @@ p {
 .nav__links li {
   display: inline-block;
   padding: 0px 20px;
-  font-size: 20px;
+  font-size: 22px;
   text-shadow: 2px 2px 4px #000000;
 }
 
@@ -51,17 +49,32 @@ p {
   color: #ffd36a;
 }
 
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
-  /* background-color: rgba(255, 255, 255, 0.2); */
+  padding: 30px 5%;
 }
 
 .logo {
   cursor: pointer;
 }
+
+/* Main Content of Page */
 
 button {
   border-radius: 4px;
@@ -74,7 +87,6 @@ button {
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 36px;
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
 }
 
@@ -104,32 +116,40 @@ button:hover:after {
   right: 10px;
 }
 
-.container {
+.main__content {
   display: grid;
-  padding: 20px;
-  grid-template-columns: minmax(400px, 500px);
+  grid-gap: 30px;
+  padding: 40px;
+  justify-items: start;
+  align-content: center;
+  grid-template-columns: 500px;
 }
 
-/* Navbar */
-/* .navbar {
-  background-color: lightslategray;
-  color: #fff;
-  overflow: hidden;
-}
+@media only screen and (max-width: 768px) {
+  .nav__links {
+    position: fixed;
+    left: -100%;
+    /* top: 5rem;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);  */
+  }
 
-.navbar ul {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
+  /* .nav__links.active {
+    left: 0;
+  } */
 
-.navbar a {
-  color: rebeccapurple;
-  padding: 10px;
-  margin: 0 5px;
-}
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
 
-.navbar .flex {
-  justify-content: center;
-  align-items: center;
-} */
+  .main__content {
+    display: flex;
+    flex-direction: column;
+  }
+}
