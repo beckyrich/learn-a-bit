@@ -19,8 +19,6 @@ body {
 /* Navbar */
 li {
   list-style-type: none;
-  /* display: inline-block;
-  font-size: 22px; */
 }
 
 .navbar {
@@ -28,7 +26,6 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  /* padding: 30px 5%; */
 }
 
 .nav-logo {
